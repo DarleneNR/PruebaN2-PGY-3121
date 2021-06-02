@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                     <label for="rut" class="control-label col-xs-2">RUT</label>
-                                    <input id="rut" name="rut" type="text" placeholder="12.345.678-9" class="form-control" minlength="13" required>
+                                    <input id="rut" name="rut" type="text" placeholder="12.345.678-9" class="form-control" minlength="8" required>
                                 </div>
                             </div>
                             <br><br>
@@ -100,12 +100,12 @@
                                 <div class="row justify-content-md-center">
                                     <div class="col-md-3 col-sm-3 col-xs-3">
                                         <label for="estado_civil" class="control-label col-xs-2">Estado Civil</label>
-                                        <input id="estado_civil" name="estado_civil" type="text" placeholder="" class="form-control" minlength="9" required>
+                                        <input id="estado_civil" name="estado_civil" type="text" placeholder="" class="form-control" minlength="5" required>
                                     </div>
                                     <div class="col-md-4 col-sm-4 col-xs-4">
                                         <label for="nacionalidad">Nacionalidad</label>
                                         <select id="nacionalidad" name="nacionalidad" class="form-control" required>
-                                            <option disabled>Selecciona una opción</option>
+                                            <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="chilena">Chilena</option>
                                             <option value="extranjera_definitiva">Extranjera con permanencia definitiva</option>
                                             <option value="extranjera_residencia">Extranjera con residencia</option>
@@ -121,7 +121,7 @@
                                     <div class="col-md-3 col-sm-3 col-xs-3">
                                         <label for="estudio_extranjero" class="control-label col-xs-2" style="font-size: 12.5px">¿Cursaste los 2 últimos años de enseñanza escolar en el extranjero?</label>
                                         <select id="estudio_extranjero" name="estudio_extranjero" class="form-control" required>
-                                            <option disabled>Selecciona una opción</option>
+                                            <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="Si">Si</option>
                                             <option value="No">No</option>
                                         </select>
@@ -129,7 +129,7 @@
                                     <div class="col-md-3 col-sm-3 col-xs-3">
                                         <label for="discapacidad" class="control-label col-xs-4" style="padding-bottom: 12px;">¿Tienes alguna discapacidad?</label>
                                         <select id="discapacidad" name="discapacidad" class="form-control" required>
-                                            <option disabled>Selecciona una opción</option>
+                                            <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="Si">Si</option>
                                             <option value="No">No</option>
                                         </select>
@@ -141,7 +141,7 @@
                                     <div class="col-md-3 col-sm-3 col-xs-3">
                                         <label for="cuenta_ahorro" class="control-label col-xs-2" style="font-size: 12.5px">Cuenta de ahorro para estudios en Educación Superior</label>
                                         <select id="cuenta_ahorro" name="cuenta_ahorro" class="form-control" required>
-                                            <option disabled>Selecciona una opción</option>
+                                            <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="Si">Si</option>
                                             <option value="No">No</option>
                                         </select>
@@ -154,8 +154,8 @@
                             <fieldset><legend>Antecedentes Académicos</legend>
                                 <div class="row justify-content-md-center">
                                     <div class="col-md-3 col-sm-3 col-xs-3">
-                                        <label for="promedio_notas" class="control-label col-xs-2">Promedio Notas de Enseñanza Media</label>
-                                        <input id="promedio_notas" name="promedio_notas" type="number" placeholder="" class="form-control" minlength="4" required>
+                                        <label for="promedio_notas" class="control-label col-xs-2" style="font-size: 15px; padding-bottom: 1.5px;">Promedio Notas de Enseñanza Media</label>
+                                        <input id="promedio_notas" name="promedio_notas" type="number" placeholder="" class="form-control" minlength="1" required>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <label for="nom_inst_sup" class="control-label col-xs-2">Institución de Educación Superior donde te encuentras estudiando</label>
