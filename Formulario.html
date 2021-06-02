@@ -22,7 +22,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#basic-form").validate();
+            $("f-registro").validate();
         });
     </script>
 </head>
@@ -76,51 +76,219 @@
         </div>
 
         <!-- Formulario -->
-        <div class="ibody">
-            <div class="fcontanto">
-                <form class="form-horizontal" id="fcontacto" name="fcontacto" action="" method="post">
+        <div class="f-body">
+            <div class="f-postulacion">
+                <form class="form-horizontal" id="f-registro" name="f-registro" action="" method="post">
                     <div class="row justify-content-md-center">
-                        <div class="col-md-6 col-sm-6 col-xs-6">
-                            <div class="row justify-content-md-center">
+                        <div class="col-md-10 col-sm-10 col-xs-10">
+                            <!-- Datos Básicos -->
+                            <div class="row justify-content-md-center" id="inicio-for">
                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                     <label for="fname" class="control-label col-xs-2">Nombre</label>
-                                    <input id="fname" name="fname" type="text" placeholder="Nombre(s)" class="form-control" minlength="3" required>
+                                    <input id="fname" name="fname" type="text" placeholder="Nombre Completo" class="form-control" minlength="10" required>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <label for="lname" class="control-label col-xs-2">Apellido</label>
-                                    <input id="lname" name="lname" type="text" placeholder="Apellidos" class="form-control" minlength="15" required>
+                                    <label for="rut" class="control-label col-xs-2">RUT</label>
+                                    <input id="rut" name="rut" type="text" placeholder="12.345.678-9" class="form-control" minlength="13" required>
                                 </div>
                             </div>
-                            <br>
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <label for="nro_doc" class="control-label col-xs-2">Nro. Documento</label>
-                                    <input id="nro_doc" name="nro_doc" type="text" placeholder="Número de documento" class="form-control" minlength="9" required>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <label for="tipo_doc">Tipo Documento</label>
-                                    <select id="tipo_doc" name="tipo_doc"class="form-control" required>
-                                        <option value="">Elige un tipo</option>
-                                        <option value="Rut">Rut</option>
-                                        <option value="Pasaporte">Pasaporte</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br>
-                            <label for="email" class="control-label col-xs-2">Correo electr&oacute;nico</label>
-                            <input id="email" name="email" type="email" placeholder="Correo electr&oacute;nico" class="form-control" required>
-                            <br>
-                            <label for="phone" class="control-label col-xs-2">N&uacute;mero celular</label>
-                            <input id="phone" name="phone" type="number" placeholder="Celular : 987 654 321" class="form-control" minlength="9">
-                            <br>
-                            <label for="city" class="control-label col-xs-2">Ciudad</label>
-                            <input id="city" name="city" type="text" placeholder="Ciudad de residencia" class="form-control" minlength="10" required>
-                            <br>
-                            <label for="message" class="control-label col-xs-2">Asunto</label>
-                            <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí." rows="5" required></textarea>
+                            <br><br>
 
+                            <!-- Datos del Alumno -->
+                            <fieldset><legend>Datos del Alumno</legend>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        <label for="estado_civil" class="control-label col-xs-2">Estado Civil</label>
+                                        <input id="estado_civil" name="estado_civil" type="text" placeholder="" class="form-control" minlength="9" required>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <label for="nacionalidad">Nacionalidad</label>
+                                        <select id="nacionalidad" name="nacionalidad" class="form-control" required>
+                                            <option disabled>Selecciona una opción</option>
+                                            <option value="chilena">Chilena</option>
+                                            <option value="extranjera_definitiva">Extranjera con permanencia definitiva</option>
+                                            <option value="extranjera_residencia">Extranjera con residencia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5 col-sm-5 col-xs-5">
+                                        <label for="actividad" class="control-label col-xs-2">Actividad</label>
+                                        <input id="actividad" name="actividad" type="text" placeholder="Actividad que realiza" class="form-control" minlength="5" required>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <label for="estudio_extranjero" class="control-label col-xs-2">¿Cursaste los 2 últimos años de enseñanza escolar en el extranjero?</label>
+                                        <select id="estudio_extranjero" name="estudio_extranjero" class="form-control" required>
+                                            <option disabled>Selecciona una opción</option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="discapacidad" class="control-label col-xs-2">¿Tienes alguna discapacidad?</label>
+                                        <select id="discapacidad" name="discapacidad" class="form-control" required>
+                                            <option disabled>Selecciona una opción</option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        <label for="pueblo_orig" class="control-label col-xs-2">¿A qué pueblo origiario perteneces?</label>
+                                        <input id="pueblo_orig" name="pueblo_orig" type="text" placeholder="Ingresa el nombre del pueblo" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        <label for="cuenta_ahorro" class="control-label col-xs-2">Cuenta de ahorro para estudios en Educación Superior</label>
+                                        <select id="cuenta_ahorro" name="cuenta_ahorro" class="form-control" required>
+                                            <option disabled>Selecciona una opción</option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br><br>
+
+                            <!-- Antecedentes Académicos -->
+                            <fieldset><legend>Antecedentes Académicos</legend>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        <label for="promedio_notas" class="control-label col-xs-2">Promedio Notas de Enseñanza Media</label>
+                                        <input id="promedio_notas" name="promedio_notas" type="number" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <label for="nom_inst_sup" class="control-label col-xs-2">Institución de Educación Superior donde te encuentras estudiando</label>
+                                        <input id="nom_inst_sup" name="nom_inst_sup" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-4">
+                                        <label for="pueblo_orig" class="control-label col-xs-2">Último año e matrícula en Institución de Educación Superior</label>
+                                        <input id="pueblo_orig" name="pueblo_orig" type="number" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br><br>
+
+                            <!-- Integrantes del Grupo Familiar -->
+                            <fieldset><legend>Integrantes del Grupo Familiar</legend>
+                                <div class="row justify-content-md-center">
+                                    <table style="border:1;">
+                                        <tr>
+                                            <td>Nombres</td>
+                                            <td>Apellido Paterno</td>
+                                            <td>Apellido Materno</td>
+                                            <td>Rut</td>
+                                            <td>Edad</td>
+                                            <td>Estado Civil</td>
+                                            <td>Parentesco</td>
+                                            <td>Previsión</td>
+                                            <td>Previsión Salud</td>
+                                            <td>Actvidad</td>
+                                            <td>Nivel de Estudio</td>
+                                        </tr>
+                                        <!-- Ingreso de Datos 1-->
+                                        <tr>
+                                        <td><input id="nombre1" name="nombre1" type="text" placeholder="" class="form-control" required> </td>
+                                        <td><input id="apellido_p1" name="apellido_p1" type="text" placeholder="" class="form-control" required></td>
+                                        <td><input id="apellido_m1" name="apellido_m1" type="text" placeholder="" class="form-control" required> </td>
+                                        <td><input id="numrut1" name="numrut1" type="text" placeholder="" class="form-control" required></td>
+                                        <td><input id="edad1" name="edad1" type="number" placeholder="" class="form-control" required> </td>
+                                        <td><input id="estado_civil1" name="estado_civil1" type="text" placeholder="" class="form-control" required></td>
+                                        <td><input id="parentesco1" name="parentesco1" type="text" placeholder="" class="form-control" required> </td>
+                                        <td><input id="prev1" name="prev1" type="text" placeholder="" class="form-control" required></td>
+                                        <td><input id="prev_salud1" name="prev_salud1" type="text" placeholder="" class="form-control" required> </td>
+                                        <td><input id="act1" name="act1" type="text" placeholder="" class="form-control" required></td>
+                                        <td><input id="nivel_estudio1" name="nivel_estudio1" type="text" placeholder="" class="form-control" required></td>
+                                        </tr>
+                                        <!-- Ingreso de Datos 2-->
+                                        <tr>
+                                        <td><input id="nombre2" name="nombre2" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="apellido_p2" name="apellido_p2" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="apellido_m2" name="apellido_m2" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="numrut2" name="numrut2" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="edad2" name="edad2" type="number" placeholder="" class="form-control"> </td>
+                                        <td><input id="estado_civil2" name="estado_civil2" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="parentesco2" name="parentesco2" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="prev2" name="prev2" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="prev_salud2" name="prev_salud2" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="act2" name="act2" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="nivel_estudio2" name="nivel_estudio2" type="text" placeholder="" class="form-control"></td>
+                                        </tr>
+                                        <!-- Ingreso de Datos 3-->
+                                        <tr>
+                                        <td><input id="nombre3" name="nombre3" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="apellido_p3" name="apellido_p3" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="apellido_m3" name="apellido_m3" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="numrut3" name="numrut3" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="edad3" name="edad3" type="number" placeholder="" class="form-control"> </td>
+                                        <td><input id="estado_civil3" name="estado_civil3" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="parentesco3" name="parentesco3" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="prev3" name="prev3" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="prev_salud3" name="prev_salud3" type="text" placeholder="" class="form-control"> </td>
+                                        <td><input id="act3" name="act3" type="text" placeholder="" class="form-control"></td>
+                                        <td><input id="nivel_estudio3" name="nivel_estudio3" type="text" placeholder="" class="form-control"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </fieldset>
+                            <br><br>
+
+                            <!-- Dirección del Grupo Familiar -->
+                            <fieldset><legend>Dirección del Grupo Familiar</legend>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="direccion" class="control-label col-xs-2">Dirección</label>
+                                        <input id="direccion" name="direccion" type="text" placeholder="" class="form-control" minlength="7" required>
+                                    </div>
+                                    <div class="col-md-1 col-sm-1 col-xs-1">
+                                        <label for="num_dir" class="control-label col-xs-2">Número</label>
+                                        <input id="num_dir" name="num_dir" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-1 col-sm-1 col-xs-1">
+                                        <label for="depart" class="control-label col-xs-2">Depart.</label>
+                                        <input id="depart" name="depart" type="text" placeholder="" class="form-control" minlength="4">
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="pob_villa" class="control-label col-xs-2">Población o Villa</label>
+                                        <input id="pob_villa" name="pob_villa" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="region" class="control-label col-xs-2">Región</label>
+                                        <input id="region" name="region" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="comuna" class="control-label col-xs-2">Comuna</label>
+                                        <input id="comuna" name="comuna" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <label for="ciudad" class="control-label col-xs-2">Ciudad</label>
+                                        <input id="ciudad" name="ciudad" type="text" placeholder="" class="form-control" minlength="4" required>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br><br>
+
+                            <!-- Teléfonos -->
+                            <fieldset><legend>Teléfonos</legend>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        <label for="cod_area" class="control-label col-xs-2">Código de área</label>
+                                        <input id="cod_area" name="cod_area" type="number" placeholder="" class="form-control" minlength="4">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <label for="telf_fijo" class="control-label col-xs-2">Teléfono fijo</label>
+                                        <input id="telf_fijo" name="telf_fijo" type="number" placeholder="" class="form-control" minlength="4">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-4">
+                                        <label for="celular" class="control-label col-xs-2">Celular</label>
+                                        <input id="celular" name="celular" type="number" placeholder="" class="form-control" minlength="4">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br><br>
+
+                            <!-- Enviar Postulación -->
                             <div class="botones">
-                                <input id="reset" name="reset" type="reset" class="btn btn-info" value="Limpiar">
+                                <input id="reset" name="reset" type="reset" class="btn btn-info" value="Volver a empezar">
                                 <input id="submit" name="submit" type="submit" class="btn btn-info" value="Enviar">
                             </div>
                         </div>
@@ -128,13 +296,7 @@
                 </form>
             </div>
         </div>
-        <!-- Fin Formulario -->
     </div>
-
-
-
-
-
 
     <!-- Footer -->
     <div id="pie-footer">
