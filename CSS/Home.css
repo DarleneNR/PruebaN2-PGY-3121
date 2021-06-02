@@ -7,24 +7,25 @@ body {
 }
 /* Cabecera Página */
 .jumbotron {
-  position: relative;
-  background:none;
-  margin-bottom: 10px;
+    position: relative;
+    background:none;
+    margin-bottom: 10px;
 }
 .jumbotron:after {
-  content : "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, rgba(9, 33, 77, 0.664), rgba(167, 41, 58, 0.555), rgba(93, 27, 146, 0.445)), url(https://i.pinimg.com/564x/62/3d/d6/623dd62ee8ef82d215615d306e0ebb26.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 85%;
-  opacity : 0.4;
-  z-index: -1;
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #152f5a;
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(78, 109, 122, 0.4) 12%,rgba(134, 106, 59, 0.144) 30%), 
+    -webkit-linear-gradient(bottom, rgba(63, 23, 128, 0.25) 0%,rgba(57, 94, 148, 0.404) 100%), 
+    -webkit-linear-gradient(-45deg, #670d10 9%,#152f5a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+    width: 100%;
+    height: 85%;
+    opacity :1.1;
+    z-index: -1;
 }
 
 /* Logo Mineduc */
@@ -35,18 +36,19 @@ body {
 
 /* Logo FUAS */
 #logo-fuas {
-  font-weight: 100;
-  font-family: fantasy;
-  font-size: 95px;
-  margin-left: -20px;
+    font-weight: 100;
+    font-family: fantasy;
+    font-size: 95px;
+    margin-left: -20px;
 }
 #eslogan-fuas {
-  text-align: inherit;
-  font-weight: 600;
-  font-size: 15px;
-  margin-top: 40px;
-  margin-right: 60px;
-  color: rgb(254, 253, 255);
+    font-family: Malgun Gothic;
+    text-align: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-right: 60px;
+    color: rgb(254, 253, 255);
 }
 
 /* Barra de Menú */
@@ -71,16 +73,17 @@ div #back-barra-nav.row #barra-nav {
 #back-titulo_inicial {
     padding: 60px;
 }
-#titulo_inicial {
+h2#titulo-inicial {
+    font-family: Malgun Gothic;
     text-align: left;
     width: 100%;
     margin-top: 1em;
     margin-bottom: 3px;
     margin-left: 3px;
     margin-right: 0;
-    font-weight: bold;
-    font-size: 1.5em;
+    font-weight: 700;
     padding: 20px;
+    color: white;
 }
 
 /* Información sobre el FUAS */
