@@ -16,67 +16,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     
-    <link href="./CSS/colabora.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/Formulario.css" rel="stylesheet" type="text/css">
 
-    <title>Web Prueba 2</title>
-
-    <!-- Uso de Web Service -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#consultar").click(function () {
-                $.get('https://www.themealdb.com/api/json/v1/1/categories.php', function (data) {
-                    $.each(data.categories, function (i, item) {
-                        $("#categorias").append("<tr><td>" + item.idCategory + "</td><td>" + item.strCategory + "</td><td><img src='" + item.strCategoryThumb + "'>" + "</td><td>" + item.strCategoryDescription + "</td></");
-                    });
-                });
-            });
-        });
-    </script>
+    <title>Postulación - FUAS</title>
 
     <script type="text/javascript">
         $(document).ready(function () {
             $("#basic-form").validate();
         });
     </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#fcontacto").validate();
-        });
-    </script>
-
 </head>
 <body>
-    <!-- Barra de Menú -->
-    <ul class="nav nav-tabs" id="barra-menu">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" data-toggle="tab">
-                Dropdown link
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link 1</a>
-                <a class="dropdown-item" href="#">Link 2</a>
-                <a class="dropdown-item" href="#">Link 3</a>
+    <div>
+        <!-- Cabecera -->
+        <div class="row">
+            <div class="div">
+                <div class="jumbotron pt-4" id="cabecera">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <a><img id="logo-mineduc" class="display-0"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_del_Ministerio_de_Educaci%C3%B3n_(Chile).jpg"></a>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <h1 id="logo-fuas" class="display-3">FUAS 2021</h1>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <p id="eslogan-fuas" class="display-5">ACCEDE A LOS BENEFICIOS ESTUDIANTILES DEL ESTADO PARA
+                                LA EDUCACIÓN SUPERIOR</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </li>
-        <!-- <li> 
-            <svg id="icon-login2" data-bbox="0 0 80 80" data-type="shape" xmlns="http://www.w3.org/2000/sgv" width="50" height="50" viewBox="0 0 80 80">
-                <g style="margin-left:-80px;">
-                    <path path(d="M 25 48.077 c -5.924 0 -11.31 -2.252 -15.396 -5.921 c 2.254 -5.362 7.492 -8.267 15.373 -8.267 c 7.889 0 13.139 3.044 15.408 8.418 c -4.084 3.659 -9.471 5.77 -15.385 5.77 m 0.278 -35.3 c 4.927 0 8.611 3.812 8.611 8.878 c 0 5.21 -3.875 9.456 -8.611 9.456 s -8.611 -4.246 -8.611 -9.456 c 0 -5.066 3.684 -8.878 8.611 -8.878 M 25 0 C 11.193 0 0 11.193 0 25 c 0 0.915 0.056 1.816 0.152 2.705 c 0.032 0.295 0.091 0.581 0.133 0.873 c 0.085 0.589 0.173 1.176 0.298 1.751 c 0.073 0.338 0.169 0.665 0.256 0.997 c 0.135 0.515 0.273 1.027 0.439 1.529 c 0.114 0.342 0.243 0.675 0.37 1.01 c 0.18 0.476 0.369 0.945 0.577 1.406 c 0.149 0.331 0.308 0.657 0.472 0.98 c 0.225 0.446 0.463 0.883 0.714 1.313 c 0.182 0.312 0.365 0.619 0.56 0.922 c 0.272 0.423 0.56 0.832 0.856 1.237 c 0.207 0.284 0.41 0.568 0.629 0.841 c 0.325 0.408 0.671 0.796 1.02 1.182 c 0.22 0.244 0.432 0.494 0.662 0.728 c 0.405 0.415 0.833 0.801 1.265 1.186 c 0.173 0.154 0.329 0.325 0.507 0.475 l 0.004 -0.011 A 24.886 24.886 0 0 0 25 50 a 24.881 24.881 0 0 0 16.069 -5.861 a 0.126 0.126 0 0 1 0.003 0.01 c 0.172 -0.144 0.324 -0.309 0.49 -0.458 c 0.442 -0.392 0.88 -0.787 1.293 -1.209 c 0.228 -0.232 0.437 -0.479 0.655 -0.72 c 0.352 -0.389 0.701 -0.78 1.028 -1.191 c 0.218 -0.272 0.421 -0.556 0.627 -0.838 c 0.297 -0.405 0.587 -0.816 0.859 -1.24 a 26.104 26.104 0 0 0 1.748 -3.216 c 0.208 -0.461 0.398 -0.93 0.579 -1.406 c 0.127 -0.336 0.256 -0.669 0.369 -1.012 c 0.167 -0.502 0.305 -1.014 0.44 -1.53 c 0.087 -0.332 0.183 -0.659 0.256 -0.996 c 0.126 -0.576 0.214 -1.164 0.299 -1.754 c 0.042 -0.292 0.101 -0.577 0.133 -0.872 c 0.095 -0.89 0.152 -1.791 0.152 -2.707 C 50 11.193 38.807 0 25 0"></path>
-                </g>
-            </svg>
-        </li> -->
-    </ul>
-    <!-- Fin Barra de Menú -->
+        </div>
+        <!-- Fin Cabecera -->
+
+        <!-- Barra de Menú -->
+        <div class="row" id="back-barra-nav">
+            <nav class="navbar navbar-expand navbar-light shadow-sm" id="barra-nav">
+                <div class="container">
+                    <ul class="navbar-nav mx-auto" id="items-nav">
+                        <li class="nav-item"><a href="Home.html" class="nav-link font-weight-bold">Inicio</a></li>
+                        <li class="nav-item"><a href="Formulario.html" class="nav-link font-weight-bold">Postular</a></li>
+                        <li class="nav-item"><a href="" class="nav-link font-weight-bold">Contáctanos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Fin Barra de Menú -->
+    </div>
+    </div>
 
     <!-- Formulario -->
     <div class="ibody">

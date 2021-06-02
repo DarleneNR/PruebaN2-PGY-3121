@@ -109,10 +109,72 @@ table, th, td {
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 90px;
+    margin-left: 20px;
     padding: 20px;
 }
+#mensaje {
+    color: rgb(241, 42, 58);
+    font-size: 25px;
+    font-family: Bahnschrift SemiBold;
+}
+p#desc-mensaje {
+    color: rgb(10, 6, 27);
+    font-size: 20px;
+    font-family: Bahnschrift;
+    margin-bottom: -30px;
+}
 
+.vlr-uf {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    color: #227a72;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 25px 0;
+    font-weight: bold;
+    border-radius: inherit !important;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    width: 50%;
+    indent-text: 5mm;
+}
+.vlr-uf-2 {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 15px 0;
+    color: #227a72;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 25px 0;
+    font-weight: bold;
+    border-radius: inherit !important;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    width: 14%;
+}
+
+.ft {
+    margin-right: 15px;
+    margin-left: 11px;
+    color: #b1b1b1;
+}
+.vl-uf {
+    display: inline-block;
+}
+hr.linea {
+    border: 1px solid rgb(26, 26, 26);
+    background-color: rgb(26, 26, 26);
+    margin-left: 80px;
+    padding: 0.9px;
+}
+
+#consultar {
+    margin-top: 5px;
+    padding: 8px;
+    margin-left: 850px;
+    background-color: rgb(89, 73, 119);
+}
 
 /* Footer */
 #pie-footer {

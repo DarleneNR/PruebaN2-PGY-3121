@@ -19,10 +19,16 @@
 
     <!-- Consumo de Web Service -->
     <script type="text/javascript">
-
+        $(document).ready(function () {
+            $("#consultar").click(function () {
+                $.get('https://mindicador.cl/api', function (data) {
+                    $("#result").append("<div><div>" + "1 UF " + "</div><div>" + "$" + data.uf.valor + "</div></div>");
+                });
+            });
+        });
     </script>
-
 </head>
+
 <body>
     <div>
         <!-- Cabecera -->
@@ -52,8 +58,8 @@
             <nav class="navbar navbar-expand navbar-light shadow-sm" id="barra-nav">
                 <div class="container">
                     <ul class="navbar-nav mx-auto" id="items-nav">
-                        <li class="nav-item"><a href="" class="nav-link font-weight-bold">Inicio</a></li>
-                        <li class="nav-item"><a href="" class="nav-link font-weight-bold">Postular</a></li>
+                        <li class="nav-item"><a href="Home.html" class="nav-link font-weight-bold">Inicio</a></li>
+                        <li class="nav-item"><a href="Formulario.html" class="nav-link font-weight-bold">Postular</a></li>
                         <li class="nav-item"><a href="" class="nav-link font-weight-bold">Contáctanos</a></li>
                     </ul>
                 </div>
@@ -108,21 +114,31 @@
             </table>
         </div>
 
-
-        <div class="container" id="consulta-uf">
-            <p id=""><strong>¡IMPORTANTE!</strong></p>
-            <span>El Gobierno de chile trabaja la gratuidad en base al valor de UF.</span>
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 flota-i pad-top-bottom-0">
-                    
+        <!-- Consulta por valor de UF -->
+        <hr class="linea">
+        <div class="container">
+            <div id="consulta-uf">
+                <p id="mensaje"><strong>¡IMPORTANTE!</strong></p>
+                <p id="desc-mensaje">El Gobierno de chile trabaja la gratuidad en base al valor de UF.
+                    <br>Para conocer este valor consultalo en el siguiente formulario
+                </p>
+            </div>
+            
+            <div class="row justify-content-md-center">
+                <div class="vlr-uf">
+                    <div class="col-md-6">Valor UF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</div>
+                    <div class="col-md-6">Cantidad en Pesos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</div>
+                </div>
+                
+                <div class="vlr-uf-2" id="result">
+                    <!-- Resultado de consulta -->
                 </div>
             </div>
+            <button type="button" class="btn btn-primary" id="consultar">Consultar valor</button>
         </div>
-
-
-
+        <hr class="linea">
+        <!-- Fin Consulta por valor de UF -->
     </div>
-
 
     <!-- Footer -->
     <div id="pie-footer">
