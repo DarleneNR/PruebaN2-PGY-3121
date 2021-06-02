@@ -4,56 +4,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- Latest compiled and minified JQuery with Ajax -->
+    <!-- Agregados -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Validación con librerias -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-    <title>Web Prueba 2</title>
+    <link href="./CSS/Index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./JS/Index.js"></script>
 
-    <!-- Uso de Web Service -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#consultar").click(function () {
-                $.get('https://www.themealdb.com/api/json/v1/1/categories.php', function (data) {
-                    $.each(data.categories, function (i, item) {
-                        $("#categorias").append("<tr><td>" + item.idCategory + "</td><td>" + item.strCategory + "</td><td><img src='" + item.strCategoryThumb + "'>" + "</td><td>" + item.strCategoryDescription + "</td></");
-                    });
-                });
-            });
-        });
-    </script>
+    <title>Iniciar Sesión - FUAS</title>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#basic-form").validate();
-        });
-    </script>
 </head>
 <body>
-    <h1>Texto Ejemplo</h1>
+    <!-- Cabecera -->
+    <div class="jumbotron pt-4">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a><img id="logo-mineduc" class="display-0" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_del_Ministerio_de_Educaci%C3%B3n_(Chile).jpg"></a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <h1 id="logo-fuas" class="display-3">FUAS 2021</h1>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <p id="eslogan-fuas" class="display-5">ACCEDE A LOS BENEFICIOS ESTUDIANTILES DEL ESTADO PARA LA EDUCACIÓN SUPERIOR</p>
+            </div>
+        </div>
+    </div>
 
-    <form id="basic-form" action="" method="post">
-        <p>
-            <label for="name">Name <span>(required, at least 3 characters)</span></label>
-            <input id="name" name="name" minlength="3" type="text" required>
-        </p>
-        <p>
-            <label for="email">E-Mail <span>(required)</span></label>
-            <input id="email" type="email" name="email" required>
-        </p>
-        <p>
-            <input class="submit" type="submit" value="SUBMIT">
-        </p>
-    </form>
+    <!-- Login -->
+    <div class="container">
+        <div class="login">
+            <h1>Inicio de sesión </h1>
+            <form id="form-login" name="form-login" method="post">
+                <table>
+                    <tr>
+                        <th>
+                            <input id="user" class="input_user" type="text" name="u" placeholder="Nombre de usuario" minlength="4" required/>
+                            <label id="mensaje1" class="errores1">Nombre inv&aacute;lido</label>
+                        </th>
+                        <th>
+                            <input id="email" type="email" name="e" placeholder="Correo Electrónico" minlength="8" required/>
+                            <label id="mensaje2" class="errores2">Correo electr&oacute;nico inv&aacute;lido</label>
+                        </th> 
+                    </tr>
+                </table>
+                <button id="submit" type="submit" class="btn btn-primary btn-block btn-large">Ingresar</button>    
+            </form>
+        </div>
+    </div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
-
 </html>
