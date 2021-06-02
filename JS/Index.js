@@ -1,4 +1,3 @@
-/* Validación con libreria */
 $(document).ready(function () {
     /*$("#form-login").validate();*/
     $("#submit").click(function(){
