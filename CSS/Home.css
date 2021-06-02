@@ -1,0 +1,102 @@
+html { width: 100%; height:100%; overflow:hidden; }
+
+body { 
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+/* Cabecera Página */
+.jumbotron {
+  position: relative;
+  background:none;
+  margin-bottom: 10px;
+}
+.jumbotron:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(9, 33, 77, 0.664), rgba(167, 41, 58, 0.555), rgba(93, 27, 146, 0.445)), url(https://i.pinimg.com/564x/62/3d/d6/623dd62ee8ef82d215615d306e0ebb26.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 85%;
+  opacity : 0.4;
+  z-index: -1;
+}
+
+/* Logo Mineduc */
+#logo-mineduc{
+    width: 35%;
+    margin-left: 60px;
+}
+
+/* Logo FUAS */
+#logo-fuas {
+  font-weight: 100;
+  font-family: fantasy;
+  font-size: 95px;
+  margin-left: -20px;
+}
+#eslogan-fuas {
+  text-align: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 40px;
+  margin-right: 60px;
+  color: rgb(254, 253, 255);
+}
+
+/* Barra de Menú */
+div #back-barra-nav.row #barra-nav {
+    margin-bottom: 0px;
+    height: 15px;
+}
+#items-nav {    
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+/* Contenido */
+#back-contenido {
+    background: linear-gradient(to bottom, rgba(46, 72, 121, 0.459), rgba(111, 51, 129, 0.473), rgba(96, 136, 151, 0.418)), url(https://i.pinimg.com/236x/94/70/4f/94704fc21042217f30b0df3f0d5673a7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
+}
+
+#back-titulo_inicial {
+    padding: 60px;
+}
+#titulo_inicial {
+    text-align: left;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+/* Información sobre el FUAS */
+
+
+/* Footer */
+#pie-footer {
+    background-color: #000;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.titulo-footer {
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    top: 13px;
+}
