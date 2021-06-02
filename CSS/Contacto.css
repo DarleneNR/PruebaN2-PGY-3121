@@ -1,0 +1,150 @@
+/* Cabecera Página */
+.jumbotron {
+    position: relative;
+    background:none;
+    margin-bottom: 5px;
+}
+.jumbotron:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #152f5a;
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(78, 109, 122, 0.4) 12%,rgba(134, 106, 59, 0.144) 30%), 
+    -webkit-linear-gradient(bottom, rgba(63, 23, 128, 0.25) 0%,rgba(57, 94, 148, 0.404) 100%), 
+    -webkit-linear-gradient(-45deg, #670d10 9%,#152f5a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+    width: 100%;
+    height: 85%;
+    opacity :1.1;
+    z-index: -1;
+}
+
+/* Logo Mineduc */
+#logo-mineduc{
+    width: 35%;
+    margin-left: 60px;
+}
+
+/* Logo FUAS */
+#logo-fuas {
+    font-weight: 100;
+    font-family: fantasy;
+    font-size: 95px;
+    margin-left: -20px;
+}
+#eslogan-fuas {
+    font-family: Malgun Gothic;
+    text-align: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-right: 60px;
+    color: rgb(254, 253, 255);
+}
+
+/* Barra de Menú */
+div #back-barra-nav.row #barra-nav {
+    margin-bottom: 0px;
+    height: 15px;
+}
+#items-nav {    
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+/* Formulario de contacto */
+#ibody {
+    background-color: #382d3093;
+    margin: 30px auto;
+    width: 1150px;
+    border: 2px solid #859696be;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#back-form-contacto {
+    /* background: linear-gradient(to bottom, rgba(46, 72, 121, 0.459), rgba(111, 51, 129, 0.473), rgba(96, 136, 151, 0.418)), url(https://i.pinimg.com/236x/94/70/4f/94704fc21042217f30b0df3f0d5673a7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background: linear-gradient(to right, #1b466981, rgba(151, 126, 126, 0.808), rgba(156, 38, 44, 0.534));  
+    color: white;
+    padding: 30px;
+    font-family: Microsoft Sans Serif;
+}
+
+.fcontanto {
+    padding: 5px;
+}
+#inputs {
+    margin-left: 35px;
+}
+label {
+    font-family: Malgun Gothic;
+    font-size: 20px;
+}
+
+label, input[type="reset"], input[type="submit"] {
+    margin-top: 15px;
+    color: rgb(8, 8, 8);
+
+}
+#reset {
+    margin-left: 355px;
+}
+#submit {
+    margin-left: 25px;
+}
+
+#back-img {
+    background: linear-gradient(to bottom, rgba(46, 49, 46, 0.692), rgba(48, 46, 49, 0.767), rgba(49, 46, 46, 0.753)), url(https://i.pinimg.com/564x/90/7d/60/907d60c034f46c42538a1739f276be43.jpg);
+    background-repeat: repeat;
+    border-radius: 8px;
+    width: 528px;
+    height: 650px;
+}
+#img-formulario {
+    position: absolute;
+    height: 490px;
+    margin-top: 40px;
+}
+#mensaje-form {
+    font-family: Rockwell;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(123, 77, 151);
+    font-weight: bolder;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.botones {
+    align-content: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+/* Validación de Formulario */
+label#fname-error.error,label#email-error.error,label#message-error.error {
+    color: rgba(136, 28, 28, 0.966);
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Footer */
+#pie-footer {
+    background-color: #000;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.titulo-footer {
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    top: 13px;
+}
