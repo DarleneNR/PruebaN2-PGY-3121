@@ -199,6 +199,13 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
   position: absolute;
 }
 
+/* label#user-error.error,label#email-error.error {
+  color: rgba(136, 28, 28, 0.966);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+} */
+
 /* Footer */
 /* #pie-footer {
   background-color: #000;

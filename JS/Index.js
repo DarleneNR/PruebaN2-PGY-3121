@@ -1,3 +1,7 @@
+/* $(document).ready(function () {
+    $("#form-login").validate();
+}); */
+
 $(document).ready(function () {
     /*$("#form-login").validate();*/
     $("#submit").click(function(){
@@ -29,40 +33,3 @@ $(document).ready(function () {
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function enviar() {
-    var str_user = document.getElementById("user").val().trim();
-    var str_email = document.getElementById("email").val().trim();
-    if (str_user == 'admin123' || str_email == 'admin@duoc.cl') {
-        location.href = "Home.html";
-    }
-};
-
-/* function enviar() {
-    location.href = "Home.html";
-}; */
